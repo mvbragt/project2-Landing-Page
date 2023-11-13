@@ -31,11 +31,15 @@ const body = document.body;
 
 
 // Start Helper Functions
-// the section needs to have an unique ID. How to?
 const newSection = document.createElement('section');
-newSection.setAttribute('data-nav', `section`);
-//newSection.innerHTML
-
+newSection.id = `section 4`;
+newSection.setAttribute('data-nav', `section 4`);
+newSection.innerHTML = ` 
+            <div class="landing__container">
+            <h2>Section 4</h2>
+            <p>Content for Section 4</p>
+            </div>`;
+body.insertAdjacentElement("beforeend", newSection);
 //then append it to the body
 
 //Begin Main Functions
