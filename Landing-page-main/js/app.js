@@ -20,14 +20,15 @@
 
 //build on what we already have.
     // So first add top navigation -- check
-    // second add sections
+    // second add one section
+    //make function out of it
     // then add new sections to navigation
     // then style
 
 //Define Global Variables
 const sections = document.querySelectorAll('section');
 const navList = document.getElementById('navbar__list');
-const body = document.body;
+const  main= document.querySelector('main');
 
 
 // Start Helper Functions
@@ -39,8 +40,10 @@ newSection.innerHTML = `
             <h2>Section 4</h2>
             <p>Content for Section 4</p>
             </div>`;
-body.insertAdjacentElement("beforeend", newSection);
-//then append it to the body
+main.appendChild(newSection);
+
+
+
 
 //Begin Main Functions
 // Create a topnav to every section
