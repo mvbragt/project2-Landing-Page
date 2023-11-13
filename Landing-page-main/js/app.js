@@ -18,8 +18,8 @@
  * Great to have comments before crucial code sections within the procedure.
 */
 
-//build on what we allready have.
-    // So first add top navigation
+//build on what we already have.
+    // So first add top navigation -- check
     // second add sections
     // then add new sections to navigation
     // then style
@@ -27,12 +27,16 @@
 //Define Global Variables
 const sections = document.querySelectorAll('section');
 const navList = document.getElementById('navbar__list');
-
+const body = document.body;
 
 
 // Start Helper Functions
+// the section needs to have an unique ID. How to?
+const newSection = document.createElement('section');
+newSection.setAttribute('data-nav', `section`);
+//newSection.innerHTML
 
-
+//then append it to the body
 
 //Begin Main Functions
 // Create a topnav to every section
