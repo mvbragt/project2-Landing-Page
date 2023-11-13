@@ -20,8 +20,8 @@
 
 //build on what we already have.
     // So first add top navigation -- check
-    // second add one section
-    //make function out of it
+    // second add one section -- check
+    //make function out of it -- check
     // then add new sections to navigation
     // then style
 
@@ -32,15 +32,19 @@ const  main= document.querySelector('main');
 
 
 // Start Helper Functions
-const newSection = document.createElement('section');
-newSection.id = `section 4`;
-newSection.setAttribute('data-nav', `section 4`);
-newSection.innerHTML = ` 
+//create 4 sections and add to main
+for(let i = 4; i <= 7; i++) {
+    const newSection = document.createElement('section');
+    newSection.id = `section${i}`;
+    newSection.setAttribute('data-nav', `section ${i}`);
+    newSection.innerHTML = ` 
             <div class="landing__container">
-            <h2>Section 4</h2>
-            <p>Content for Section 4</p>
+            <h2>Section ${i}</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.
+Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
             </div>`;
-main.appendChild(newSection);
+    main.appendChild(newSection);
+}
 
 
 
