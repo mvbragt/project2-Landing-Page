@@ -22,7 +22,6 @@
 
 const navList = document.getElementById('navbar__list');
 const main= document.querySelector('main');
-const sectionList = document.querySelectorAll('section')
 
 // Start Helper Functions
 //create 4 sections and add to main
@@ -61,9 +60,10 @@ createTopNavigation();
 
 
 
+const sections = document.querySelectorAll('section');
 //set active class
 window.onscroll = function() {
-    sectionList.forEach(function(section){
+    sections.forEach(function(section){
         if (checkVisible(section)) {
             section.classList.add('your-active-class');
         } else {
