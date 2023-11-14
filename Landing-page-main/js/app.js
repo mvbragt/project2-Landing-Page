@@ -22,7 +22,6 @@
 
 const navList = document.getElementById('navbar__list');
 const main= document.querySelector('main');
-const list = document.getElementById('section${i}');
 const sections = document.querySelectorAll('section');
 
 console.log(sections);
@@ -66,8 +65,10 @@ createTopNavigation();
 
 
 //set active class
+const sectionList = document.querySelectorAll('section[data-nav="' + sectionDataNav + '"]')
+
 window.onscroll = function() {
-    sections.forEach(function(section){
+    sectionList.forEach(function(section){
         if (checkVisible(section)) {
             section.classList.add('your-active-class');
         } else {
