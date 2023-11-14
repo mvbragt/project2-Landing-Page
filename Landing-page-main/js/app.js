@@ -22,7 +22,7 @@
 
 const navList = document.getElementById('navbar__list');
 const main= document.querySelector('main');
-const sections = document.querySelectorAll('section');
+const sectionList = document.querySelectorAll('section')
 
 // Start Helper Functions
 //create 4 sections and add to main
@@ -62,8 +62,6 @@ createTopNavigation();
 
 
 //set active class
-const sectionList = document.querySelectorAll('section')
-
 window.onscroll = function() {
     sectionList.forEach(function(section){
         if (checkVisible(section)) {
@@ -79,3 +77,13 @@ function checkVisible(elm) {
     return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
 }
 
+
+//add style to menu
+const navListItem = document.querySelectorAll('.menu__link')
+document.addEventListener('DOMContentLoaded', function () {
+    navListItem.forEach(function(navItem) {
+        navItem.addEventListener('click', function(){
+            navItem.style.background = "aquamarine";
+        })
+    });
+})
