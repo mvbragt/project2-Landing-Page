@@ -74,21 +74,24 @@ window.onscroll = function() {
 function checkVisible(elm) {
     const rect = elm.getBoundingClientRect();
     const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
-    return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+    return !(rect.bottom < 0 || rect.top >= 0);
 }
 
 
 
 //add style to menu
-const navListItem = document.querySelectorAll('.menu__link')
+const navListItems = document.querySelectorAll('.menu__link')
+let clickedBefore= false;
+
 
 document.addEventListener('DOMContentLoaded', function () {
-    navListItem.forEach(function(navItem) {
+    navListItems.forEach(function(navItem) {
         navItem.addEventListener('click', function(){
             if (navItem.style.background === "aquamarine") {
                 navItem.style.background = null;
             } else {
                 navItem.style.background = "aquamarine";
+                clickedBefore = true;
             }
         })
     });
