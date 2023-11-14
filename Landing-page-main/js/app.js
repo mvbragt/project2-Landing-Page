@@ -24,8 +24,6 @@ const navList = document.getElementById('navbar__list');
 const main= document.querySelector('main');
 const sections = document.querySelectorAll('section');
 
-console.log(sections);
-
 // Start Helper Functions
 //create 4 sections and add to main
 for(let i = 4; i <= 7; i++) {
@@ -47,7 +45,6 @@ for(let i = 4; i <= 7; i++) {
     main.appendChild(newSection);
 }
 
-//Begin Main Functions
 // Create a topnav to every section
 function createTopNavigation(){
     const sections = document.querySelectorAll('section');
