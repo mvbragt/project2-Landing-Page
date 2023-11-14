@@ -66,7 +66,7 @@ window.onscroll = function() {
     sections.forEach(function(section){
         if (checkVisible(section)) {
             section.classList.add('your-active-class');
-        } else {
+        } if (!checkVisible(section)) {
             section.classList.remove('your-active-class');
         }
     })
