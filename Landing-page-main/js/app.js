@@ -54,7 +54,16 @@ function createTopNavigation(){
 
         navItem.innerHTML = `<a class="menu__link" href="#${sectionId}">${sectionDataNav}</a>`;
         navList.appendChild(navItem);
-    })
+
+        navItem.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            const targetSection = document.getElementById(sectionId);
+            targetSection.scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 }
 createTopNavigation();
 
