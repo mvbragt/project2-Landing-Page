@@ -83,7 +83,11 @@ const navListItem = document.querySelectorAll('.menu__link')
 document.addEventListener('DOMContentLoaded', function () {
     navListItem.forEach(function(navItem) {
         navItem.addEventListener('click', function(){
-            navItem.style.background = "aquamarine";
+            if (navItem.style.background === "aquamarine") {
+                navItem.style.background = null;
+            } else {
+                navItem.style.background = "aquamarine";
+            }
         })
     });
 })
