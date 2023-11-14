@@ -5,6 +5,7 @@ The project focuses on manipulating the Document Object Model (DOM) using JavaSc
 
 ## Instructions
 <h3>**Features**</h3>
+
 **Navigation Bar:**
 The landing page includes a responsive navigation bar that dynamically adjusts based on the number of sections in the page.
 
