@@ -21,6 +21,6 @@ The navigation link corresponding to the currently viewed section is highlighted
 to provide users with a clear indication of their location on the page.
 
 ## Get started
-To get started, open `js/app.js` and start building out the app's functio nality
+To get started, open `js/app.js` and start building out the app's functionality
 
 
