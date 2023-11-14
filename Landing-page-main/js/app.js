@@ -18,17 +18,14 @@
  * Great to have comments before crucial code sections within the procedure.
 */
 
-//build on what we already have.
-    // So first add top navigation -- check
-    // second add one section -- check
-    //make function out of it -- check
-    // then add new sections to navigation
-    // then style
-
 //Define Global Variables
 
 const navList = document.getElementById('navbar__list');
-const  main= document.querySelector('main');
+const main= document.querySelector('main');
+const list = document.getElementById('section${i}');
+const sections = document.querySelectorAll('section');
+
+console.log(sections);
 
 // Start Helper Functions
 //create 4 sections and add to main
@@ -55,7 +52,6 @@ for(let i = 4; i <= 7; i++) {
 // Create a topnav to every section
 function createTopNavigation(){
     const sections = document.querySelectorAll('section');
-    console.log(sections)
     sections.forEach((section) => {
         const navItem = document.createElement('li');
         const sectionId = section.id;
@@ -67,22 +63,22 @@ function createTopNavigation(){
 }
 createTopNavigation();
 
-// Add class 'active' to section when near top of viewport
 
 
-// Scroll to anchor ID using scrollTO event
+//set active class
+window.onscroll = function() {
+    sections.forEach(function(section){
+        if (checkVisible(section)) {
+            section.classList.add('your-active-class');
+        } else {
+            section.classList.remove('your-active-class');
+        }
+    })
+};
 
-
-//End Main Functions
-
-
-//Begin Events
-
-
-// Build menu 
-
-// Scroll to section on link click
-
-// Set sections as active
-
+function checkVisible(elm) {
+    var rect = elm.getBoundingClientRect();
+    var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+    return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+}
 
