@@ -62,7 +62,7 @@ createTopNavigation();
 
 
 //set active class
-const sectionList = document.querySelectorAll('section[data-nav="' + sectionDataNav + '"]')
+const sectionList = document.querySelectorAll('section')
 
 window.onscroll = function() {
     sectionList.forEach(function(section){
@@ -72,8 +72,7 @@ window.onscroll = function() {
             section.classList.remove('your-active-class');
         }
     })
-};
-
+}
 function checkVisible(elm) {
     var rect = elm.getBoundingClientRect();
     var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
